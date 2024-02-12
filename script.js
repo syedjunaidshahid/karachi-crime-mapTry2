@@ -1,3 +1,4 @@
+// script.js
 require([
   'esri/Map',
   'esri/views/MapView',
@@ -71,7 +72,6 @@ require([
 
   view.on('click', function(event) {
     if (isReportingCrime) {
-      // Prevent any map navigation or zooming when in reporting mode
       event.stopPropagation();
 
       var date = prompt('Enter date (YYYY-MM-DD):');
